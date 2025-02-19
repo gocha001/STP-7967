@@ -1,0 +1,123 @@
+.section.gallery {
+    background-color: #f9f1e6;
+    padding: 40px 0;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  /* Контейнер для заголовка і кнопок */
+  .gallery-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin: 0;
+  }
+  
+  /* Контейнер кнопок */
+  .position-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Стилі кнопок */
+  .button {
+    background-color: #283287;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .button:hover {
+    background-color: #5272A1;
+  }
+  
+  .button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+  
+  /* Головний контейнер Swiper */
+  .swiper-projects {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Контейнер для слайдів */
+  .projects-list {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+  
+  /* Кожен слайд */
+  .projects-item {
+    flex-shrink: 0;
+    width: 100%; /* Гарантовано 1 картинка */
+  }
+  
+  /* Зображення */
+  .item-img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Дизаблені кнопки */
+  .swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  /* Медіа-запити для адаптивності */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .gallery-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  
+    .position-container {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .button {
+      padding: 10px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+  
