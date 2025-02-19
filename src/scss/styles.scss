@@ -1,5 +1,5 @@
-@import './header.scss';
-@import './vite-promo.scss';
+@import './sections/header.scss';
+
 @import './sections/gallery.scss';
 
 :root {
@@ -16,4 +16,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  width: 1200px;
+  background: #f9f1e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
