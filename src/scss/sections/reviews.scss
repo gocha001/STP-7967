@@ -1,101 +1,115 @@
+.review-section {
+  padding: 50px 0;
+  background-color: #f7f2ea;
+}
 
-  .section-review {
-    padding: 50px 0;
-    background-color: #f7f2ea;
+.review-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review-navigation {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.review-prev-btn-custom,
+.review-next-btn-custom {
+  width: 50px;
+  height: 50px;
+  background:  #6c7cd5;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.review-prev-btn-custom:hover,
+.review-next-btn-custom:hover {
+  background: #334899;
+}
+
+.review-nav-icon {
+  width: 24px;
+  height: 24px;
+}
+.review-prev-btn-custom,
+.review-next-btn-custom {
+  width: 55px;
+  height: 55px;
+  background: #6c7cd5; /* Світліший фон */
+  border-radius: 10px;
+}
+
+
+/* Swiper */
+.review-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden; /* Запобігає показу третього слайду */
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 50% !important; /* Забезпечує 2 слайди на десктоп/планшет */
+  max-width: 516px; /* Виправлення макету */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Гарантовано правильні розміри */
+.review-item {
+  background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
+  color: white;
+  padding: 32px; /* більше простору */
+  border-radius: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 580px !important; /* Розширити картку */
+  height: auto !important; /* Дозволити розширюватись під текст */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* Фото - більше не круглі, а лише заокруглені */
+.review-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px; /* Менше округлення */
+  object-fit: cover;
+}
+
+/* Корекція тексту */
+.review-text {
+  font-size: 18px; /* Збільшити шрифт */
+  line-height: 1.5; /* Покращити читабельність */
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Адаптивність: на мобільному по 1 слайду */
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 100% !important;
   }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .gallery-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .section-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #181A4D;
-  }
-
-  .swiper-wrapper {
-    display: flex;
-    gap: 20px;
-  }
-
-  .item-review {
-    flex: 1;
-    padding: 24px;
-    border-radius: 20px;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(180deg, #5D17EB 10.38%, #181A4D 92.63%);
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .text-review {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-
-  .review-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .img-review {
-    width: 56px;
-    height: 56px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-  .name-review {
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .profession-review {
-    font-size: 14px;
-    opacity: 0.7;
-  }
-
-  .position-container {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-  }
-
-//   .custom-prev-btn,
-//   .custom-next-btn {
-//     background-color: #5D17EB;
-//     border: none;
-//     width: 50px;
-//     height: 50px;
-//     border-radius: 12px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     cursor: pointer;
-//     transition: background-color 0.3s;
-//   }
-
-//   .custom-prev-btn:hover,
-//   .custom-next-btn:hover {
-//     background-color: #3D0FBF;
-//   }
-
-  .swiper-button-svg {
-    fill: white;
-  }
+}
