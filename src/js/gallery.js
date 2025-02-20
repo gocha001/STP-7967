@@ -24,47 +24,45 @@ const swiperProjects = new Swiper('.swiper-projects', {
 
 const projectsSection = document.querySelector('.section.gallery');
 
-const buttonPrev = document.querySelector(
-  '.position-container .swiper-button-prev'
-);
-
-const buttonNext = document.querySelector(
-  '.position-container .swiper-button-next'
-);
+const buttonPrev = document.querySelector('.position-container .swiper-button-prev');
+const buttonNext = document.querySelector('.position-container .swiper-button-next');
 
 const hiddenPrev = document.querySelector('.hiddenPrev');
 const hiddenNext = document.querySelector('.hiddenNext');
 
 function checkStatus() {
-  hiddenNext.style.display = buttonNext.hasAttribute('disabled')
-    ? 'block'
-    : 'none';
-  buttonNext.firstElementChild.style.display = buttonNext.hasAttribute(
-    'disabled'
-  )
-    ? 'none'
-    : 'block';
+  if (!buttonNext || !buttonPrev || !hiddenNext || !hiddenPrev) {
+    console.warn('One or more elements are missing.');
+    return;
+  }
 
-  hiddenPrev.style.display = buttonPrev.hasAttribute('disabled')
-    ? 'block'
-    : 'none';
-  buttonPrev.firstElementChild.style.display = buttonPrev.hasAttribute(
-    'disabled'
-  )
-    ? 'none'
-    : 'block';
+  hiddenNext.style.display = buttonNext.hasAttribute('disabled') ? 'block' : 'none';
+  if (buttonNext.firstElementChild) {
+    buttonNext.firstElementChild.style.display = buttonNext.hasAttribute('disabled') ? 'none' : 'block';
+  }
+
+  hiddenPrev.style.display = buttonPrev.hasAttribute('disabled') ? 'block' : 'none';
+  if (buttonPrev.firstElementChild) {
+    buttonPrev.firstElementChild.style.display = buttonPrev.hasAttribute('disabled') ? 'none' : 'block';
+  }
 }
+
+// Перевірка статусу після ініціалізації
 checkStatus();
 
-buttonNext.addEventListener('click', checkStatus);
-buttonPrev.addEventListener('click', checkStatus);
+// Додаємо обробники подій тільки якщо кнопки існують
+if (buttonNext) buttonNext.addEventListener('click', checkStatus);
+if (buttonPrev) buttonPrev.addEventListener('click', checkStatus);
 
-projectsSection.addEventListener('touchstart', checkStatus);
-projectsSection.addEventListener('touchend', checkStatus);
-projectsSection.addEventListener('touchmove', checkStatus);
+// Перевіряємо, чи існує projectsSection перед додаванням обробників подій
+if (projectsSection) {
+  projectsSection.addEventListener('touchstart', checkStatus);
+  projectsSection.addEventListener('touchend', checkStatus);
+  projectsSection.addEventListener('touchmove', checkStatus);
 
-projectsSection.addEventListener('keyup', event => {
-  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-    checkStatus();
-  }
-});
+  projectsSection.addEventListener('keyup', event => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      checkStatus();
+    }
+  });
+}
