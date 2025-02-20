@@ -22,7 +22,7 @@ const swiperProjects = new Swiper('.swiper-projects', {
   },
 });
 
-const projectsSection = document.querySelector('.section.projects');
+const projectsSection = document.querySelector('.section.gallery');
 
 const buttonPrev = document.querySelector(
   '.position-container .swiper-button-prev'
