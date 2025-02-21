@@ -1,0 +1,149 @@
+.section-footer {
+    background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 72px;
+    height: 280px;
+   
+   
+    @include media(to-desktop) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 280px;
+      max-width: 100%;
+      padding-left: 0;
+    padding-right: 0;
+    height: 315px;
+    }
+  }
+  
+
+  
+  .footer-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include media(to-desktop) {
+        align-items: flex-start;
+        max-width: 320px;
+       
+      }
+    
+  }
+  
+  /* Перший ряд: Лого зліва, кнопка Google Play справа */
+  .footer-logo-google {
+    display: flex;
+    justify-content: space-between; /* Розподіл лого та кнопки */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 100px;
+    @include media(to-desktop) {
+        flex-direction: column; /* Перехід у вертикальне розташування */
+        align-items: flex-start; /* Вирівнювання вліво */
+        margin-bottom: 15px;
+        padding: 0 20px;
+        gap: 20px;
+      
+       
+      }
+    
+  }
+  
+  
+  
+  .footer-spark {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Вирівнювання кнопки Google Play */
+  .footer-google {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Вирівнює кнопку по правому краю */
+    flex-grow: 1; /* Змушує зайняти весь доступний простір */
+  }
+  
+  .footer-google img {
+    width: 160px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-google img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Другий ряд: Посилання зліва, копірайт справа */
+  .footer-links-div {
+    display: flex;
+    justify-content: space-between; /* Посилання зліва, копірайт справа */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    @include media(to-desktop) {
+            flex-direction: column; /* В колонку */
+            align-items: flex-start; /* Вирівнюємо вліво */
+             
+      }
+  }
+ 
+  .footer-links-right {
+    display: flex;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    @include media(to-desktop) {
+        flex-direction: column; /* В колонку */
+        gap: 10px;
+        padding: 0;
+        margin-bottom: 10px;
+       
+    }
+  }
+  
+  .footer-links li {
+    display: inline;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right-div {
+    text-align: right;
+    @include media(to-desktop) {
+        
+        text-align: left; 
+        padding-bottom: 40px;
+       
+    }
+  }
+  
+  .footer-right {
+    font-size: 14px;
+    color: white;
+  }
+  
