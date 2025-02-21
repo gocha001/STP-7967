@@ -1,0 +1,16 @@
+.footer-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 72px;
+   
+   
+    @include media(to-desktop) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 280px;
+      max-width: 100%;
+      padding-left: 0;
+    padding-right: 0;
+    }
+}
