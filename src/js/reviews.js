@@ -11,6 +11,7 @@ const swiperReviews = new Swiper('.review-carousel', {
     nextEl: '.review-next-btn-custom',
     prevEl: '.review-prev-btn-custom',
   },
+  
   keyboard: {
     enabled: true,
     onlyInViewport: true,
