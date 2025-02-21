@@ -3,8 +3,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 72px;
-   
-   
+
+
     @include media(to-desktop) {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -96,8 +96,8 @@
         max-height: 240px !important;
         max-width: 281px;
         max-height: 240px;
-  
-  
+
+
 }
 }
 .review-carousel {
@@ -119,7 +119,7 @@
 
 /* Корекція тексту */
 .review-text {
-   
+
     font-size: 20px;
     line-height: 1.5; /* Оптимальна читабельність */
     white-space: normal;
@@ -131,8 +131,8 @@
     @include media(to-desktop) {
         font-size: 16px;
     line-height: 1.2;
-  
-  
+
+
 }
 
 }
@@ -145,23 +145,23 @@
     left: 24px;
 
 }
-  
 
-  
+
+
   /* Контейнер для імені та ролі */
   .review-text-container {
     display: flex;
     flex-direction: column;
     align-content: space-around;
   }
-  
+
   /* Стилізація імені користувача */
   .review-name {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
   }
-  
+
   /* Стилізація ролі користувача */
   .review-role {
     font-size: 14px;
