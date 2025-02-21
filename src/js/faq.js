@@ -4,32 +4,27 @@ document.addEventListener("DOMContentLoaded", function () {
     accordions.forEach((accordion) => {
         const trigger = accordion.querySelector(".ac-trigger");
         const icon = trigger.querySelector(".arrow-icon");
+        const panel = accordion.querySelector(".ac-panel");
 
         trigger.addEventListener("click", function () {
             const isOpen = accordion.classList.contains("open");
 
-            // Закриваємо всі, крім поточного (при відкритті нового)
-            accordions.forEach((item) => {
-                if (item !== accordion) {
-                    item.classList.remove("open");
-                    item.querySelector(".arrow-icon").src = "./img/icons/eye-close.png"; // Закрите око
-                }
-            });
-
-            // Перемикаємо стан поточного акордеону
+            // Перемикаємо стан поточного акордеону без закриття інших
             if (isOpen) {
                 accordion.classList.remove("open");
+                panel.style.maxHeight = null;
                 icon.src = "./img/icons/eye-close.png"; // Закрите око
             } else {
                 accordion.classList.add("open");
+                panel.style.maxHeight = panel.scrollHeight + "px"; // Встановлюємо висоту контенту
                 icon.src = "./img/icons/charm_eye.png"; // Відкрите око
             }
         });
 
         // Додаємо можливість закриття при кліку на текст (контент)
-        const panel = accordion.querySelector(".ac-panel");
         panel.addEventListener("click", function () {
             accordion.classList.remove("open");
+            panel.style.maxHeight = null;
             icon.src = "./img/icons/eye-close.png"; // Закрите око
         });
     });
