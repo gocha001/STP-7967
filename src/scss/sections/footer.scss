@@ -1,16 +1,113 @@
-.footer-section {
+.section-footer {
+    background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
     width: 100%;
+    margin: 0 auto;
+    padding: 20px 72px;
+    color: #EFEEEA;
+    @include media(to-desktop) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+       
+        width: 280px;
+        max-width: 100%;
+        padding-left: 0;
+      padding-right: 0;
+      }
+}
+
+/* Основний контейнер футера */
+.footer-wrap {
+    display: flex;
+    flex-direction: row; /* Вирівнюємо елементи в один рядок */
+    justify-content: space-between; /* Розподіл простору між елементами */
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 72px;
-   
-   
-    @include media(to-desktop) {
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      width: 280px;
-      max-width: 100%;
-      padding-left: 0;
-    padding-right: 0;
+    text-align: left;
+}
+
+/* Блок логотипа та кнопки Google Play */
+.footer-logo-google {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; /* Додає відступ між логотипом та кнопкою */
+}
+
+/* Логотип */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+/* Кнопка Google Play */
+.footer-google img {
+    width: 200px;
+    height: auto;
+}
+
+/* Блок посилань у футері */
+.footer-links-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Вирівнюємо текст по правому краю */
+    text-align: right;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .footer-wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-google {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-right {
+        text-align: center;
     }
 }
