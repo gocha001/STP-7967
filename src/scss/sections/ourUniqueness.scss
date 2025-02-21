@@ -1,0 +1,91 @@
+/* Основний стиль секції */
+.uniqueness-section {
+    background-color: #f8efe4; /* Світлий кремовий фон */
+    padding: 60px 20px;
+}
+  
+.uniqueness-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Блок тексту */
+.uniqueness-content {
+    max-width: 600px;
+}
+
+/* Заголовок */
+.uniqueness-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1b1b1b;
+    margin-bottom: 20px;
+}
+
+/* Текст */
+.uniqueness-text {
+    font-size: 18px;
+    color: #1b1b1b;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Відстань між абзацами */
+}
+
+/* Блок з персонажами */
+.uniqueness-characters {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Фон для персонажів */
+.characters-bg {
+    background: linear-gradient(135deg, #3b1c8b, #5e34d1); /* Фіолетовий градієнт */
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Персонажі */
+.uniqueness-character {
+    max-height: 320px;
+    object-fit: contain;
+}
+
+/* Відображаємо картинку лише на мобільних між другим і третім абзацом */
+.mobile-only {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .uniqueness-container {
+        flex-direction: column;
+        text-align:right;
+    }
+
+    .uniqueness-content {
+        max-width: 100%;
+    }
+
+    .characters-bg {
+        padding: 20px;
+    }
+
+    .uniqueness-character {
+        max-height: 260px;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
