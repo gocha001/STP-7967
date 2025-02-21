@@ -1,0 +1,141 @@
+.benefits-desktop {
+  display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+gap: 40px;
+padding: 0px 72px;
+width: 1201px;
+height: 828px;
+@include media(to-desktop) {
+    display: none;
+  }
+}
+
+.benefits-title {
+font-weight: 600;
+font-size: 44px;
+line-height: 1.2;
+color: #181a4d;
+}
+
+.benefits-block {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-wrap: wrap;
+gap: 24px;
+width: 1057px;
+height: 736px;
+}
+
+.benefits-item{
+  display: flex;
+align-items: flex-start;
+justify-content: space-between;
+flex-direction: column;
+gap: 12px;
+border-radius: 12px;
+padding: 24px;
+width: 336px;
+height: 356px;
+background: linear-gradient(180deg, #5d17eb 11.21%, #181a4d 100%);
+}
+
+.benefits-item-text-block {
+  display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+gap: 20px;
+width: 290px;
+// height: 163px;
+}
+
+.benefits-item-title {
+  font-weight: 500;
+font-size: 24px;
+line-height: 1.17;
+color: #efeeea;
+}
+
+.benefits-item-text {
+  font-weight: 400;
+font-size: 20px;
+line-height: 1.15;
+color: #efeeea;
+}
+
+.benefits-mob {
+  display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+gap: 28px;
+padding: 0px 0px 0px 20px;
+width: 320px;
+height: 352px;
+@include media(desktop) {
+    display: none;
+  }
+}
+
+.benefits-mob-row {
+  display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+// gap: 28px;
+width: 280px;
+height: 40px;
+}
+
+.benefits-mob-title {
+  font-weight: 500;
+font-size: 32px;
+line-height: 1.2;
+color: #181a4d;
+}
+
+.benefits-mob-btns {
+  display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: row;
+gap: 12px;
+width: 92px;
+height: 40px;
+}
+
+.benefits-mob-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  background-color:  #283287;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-mob-btn:hover {
+  background-color: #5272A1;
+}
+
+.benefits-mob-projects {
+  overflow: hidden;
+    width: 100%;
+}
+
+.benefits-mob-list {
+  display: flex;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.benefits-mob-item {
+  flex-shrink: 0;
+    width: 100%;
+}
