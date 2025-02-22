@@ -17,7 +17,7 @@
   <script type="module" crossorigin src="/STP-7967/commonHelpers.js"></script>
   <link rel="modulepreload" crossorigin href="/STP-7967/assets/vendor-85e17c97.js">
   <link rel="stylesheet" href="/STP-7967/assets/vendor-7c8ef494.css">
-  <link rel="stylesheet" href="/STP-7967/assets/index-d309227e.css">
+  <link rel="stylesheet" href="/STP-7967/assets/index-f7a37a49.css">
 </head>
 
 <body>
@@ -517,7 +517,10 @@
           <div class="item-flex-container">
             <div class="item-flex-container-bottom">
               <picture>
-                <source media="(min-width: 768px)" srcset="/STP-7967/assets/image-tab-screen1-5d2ff3d1.jpg 1x, /STP-7967/assets/image-tab-screen1-2@-29e3491f.png 2x" />
+                <source media="(min-width: 768px)" srcset="
+                   ./img/gallery-img/image-tab-screen1.jpg 1x,
+                   ./img/gallery-img/image-tab-screen1-2@.png 2x
+                  " />
 
                 <source media="(min-width: 320px)" srcset="/STP-7967/assets/image-mob-screen1-69e4dd62.jpg 1x, /STP-7967/assets/image-mob-screen1-2@-453336eb.jpg 2x" />
 
@@ -705,9 +708,9 @@
     </div>
   </div>
 
-  <div class="swiper review-carousel">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide review-item">
+  <div class="swiper-container swiper-review-carousel">
+    <ul class="swiper-wrapper swiper-wrapper-reviews">
+      <li class="swiper-slide review-item">
         <h4 class="review-text">Epic Fantasy is pure magic! From the first quest, I was hooked. The design of the
           world is gorgeous, and I love the sense of adventure I get as I explore new areas. The battles are tough but
           satisfying, and the graphics are stunning.</h4>
@@ -719,8 +722,8 @@
             <p class="review-role">Adventure Seeker</p>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide review-item">
+      </li>
+      <li class="swiper-slide review-item">
         <h4 class="review-text">If you’re a fan of strategic turn-based combat, this is a must-play. The battles
           require careful planning, and every decision counts. I’ve been playing for weeks, and I still haven’t seen
           everything the game has to offer. Truly epic!</h4>
@@ -732,8 +735,8 @@
             <p class="review-role">Strategy Lover</p>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide review-item">
+      </li>
+      <li class="swiper-slide review-item">
         <h4 class="review-text">I’ve always loved fantasy games, and Epic Fantasy has definitely delivered. The lore
           is rich, and the world feels alive with hidden details. I can’t wait to see where the story goes next. It’s
           the kind of game you’ll lose yourself in for hours.</h4>
@@ -745,8 +748,8 @@
             <p class="review-role">Fantasy Fan</p>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide review-item">
+      </li>
+      <li class="swiper-slide review-item">
         <h4 class="review-text">Epic Fantasy is the ultimate RPG! The world is massive and full of mysteries. The
           battles are so engaging, and there’s always something new to explore. The character progression is
           rewarding,
@@ -759,8 +762,8 @@
             <p class="review-role">RPG Enthusiast</p>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide review-item">
+      </li>
+      <li class="swiper-slide review-item">
         <h4 class="review-text">I’m not usually into RPGs, but Epic Fantasy hooked me from the start. The storyline is
           fantastic, and I love the colorful graphics. I especially enjoy the regular updates that bring new
           challenges. It’s an adventure I can always come back to.</h4>
@@ -772,10 +775,10 @@
             <p class="review-role">Casual Gamer</p>
           </div>
         </div>
-      </div>
+      </li>
 
 
-    </div>
+    </ul>
   </div>
 </section>
   <section class="uniqueness-section" id="our-uniqueness">
