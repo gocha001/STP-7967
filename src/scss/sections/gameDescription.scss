@@ -1,0 +1,92 @@
+.game {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 72px;
+  width: 1200px;
+  height: 696px;
+  @include media(to-desktop) {
+    gap: 28px;
+    padding: 0px 20px;
+    width: 321px;
+    height: 1037px;
+  }
+}
+
+.game-title {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.19;
+  color: #181a4d;
+  @include media(to-desktop) {
+    font-weight: 500;
+    font-size: 32px;
+  }
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+  width: 1056px;
+  height: 604px;
+  @include media(to-desktop) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    width: 281px;
+    height: 971px;
+  }
+}
+
+.game-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  width: 516px;
+  @include media(to-desktop) {
+    gap: 16px;
+    width: 281px;
+  }
+}
+
+.game-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.16;
+  color: #181a4d;
+  @include media(to-desktop) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+}
+
+.game-span {
+  font-weight: 500;
+}
+
+.game-revers {
+  flex-direction: column-reverse;
+  @include media(to-desktop) {
+    flex-direction: column;
+  }
+}
+
+.game-desktop {
+  @include media(to-desktop) {
+    display: none;
+  }
+}
+
+.game-mobile {
+  @include media(desktop) {
+    display: none;
+  }
+}
