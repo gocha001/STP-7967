@@ -54,7 +54,6 @@
   @include media(to-desktop) {
     width: 100%;
 
-    
 }
 }
 
@@ -68,10 +67,10 @@
   padding: 8px;
   border-radius: 14px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  // flex-direction: column;
-  // text-align: left;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
   display: flex;
-  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   overflow: hidden;
@@ -103,6 +102,9 @@
   @include media(to-desktop) {
     font-size: 16px;
 line-height: 1.2;
+display: -webkit-box;
+  -webkit-line-clamp: 8; 
+  -webkit-box-orient: vertical;
 
 
 }
