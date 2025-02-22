@@ -1,33 +1,27 @@
 .review-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 72px;
-
-
-    @include media(to-desktop) {
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      width: 280px;
-      max-width: 100%;
-      padding-left: 0;
-    padding-right: 0;
-    }
-}
-.review-title {
-    font-weight: 600;
-    font-size: 44px;
-    line-height: 1.2;
-    color: #181a4d;
-    @include media(to-desktop) {
-      font-weight: 500;
-      font-size: 32px;
-    }
-}
-.review-container {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 72px;
+  @include media(to-desktop) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 280px;
+    max-width: 100%;
+    padding-left: 0;
+  padding-right: 0;
+  }
+}
+
+.review-title {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.2;
+  color: #181a4d;
+  @include media(to-desktop) {
+    font-weight: 500;
+    font-size: 32px;
+  }
 }
 
 .review-header {
@@ -40,131 +34,100 @@
 .review-navigation {
   display: flex;
   gap: 10px;
-  justify-content: flex-end;
 }
 
-.review-prev-btn-custom,
-.review-next-btn-custom {
-  border: none;
+
+
+/* Стилізація слайдера */
+.swiper-review-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  
+  
+}
+
+.swiper-wrapper-reviews {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  
+  @include media(to-desktop) {
+    width: 100%;
+
+    
+}
+}
+
+.review-item {
+  width: 510px !important;
+  height: 252px !important;
+  max-width: 510px;
+  max-height: 252px;
+  background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
+  color: white;
+  padding: 8px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  // flex-direction: column;
+  // text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  @include media(to-desktop) {
+    width: 280px !important;
+    height: 240px !important;
+    max-width: 280px;
+    max-height: 240px;
+}
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.review-text {
+  font-size: 20px;
+  line-height: 1.5;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: clip;
+  flex-grow: 1;
+  margin-bottom: 16px;
+  @include media(to-desktop) {
+    font-size: 16px;
+line-height: 1.2;
+
+
+}
+}
+
+.review-info {
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  gap: 12px;
+  position: absolute; 
+  bottom: 16px; 
+  left: 24px;
 }
 
-/* Swiper */
-.review-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden; /* Виправляє обрізання */
-  } /* Запобігає показу третього слайду */
-
-// .swiper-wrapper {
-//   display: flex;
-//   gap: 24px;
-// }
-
-// .swiper-slide {
-//   flex-shrink: 0;
-//   width: 50% !important; /* Забезпечує 2 слайди на десктоп/планшет */
-//   max-width: 516px; /* Виправлення макету */
-//   transition: transform 0.3s ease-in-out;
-// }
-
-/* Гарантовано правильні розміри */
-.review-item {
-    width: 510px !important; /* Фіксована ширина */
-    height: 252px !important; /* Фіксована висота */
-    max-width: 510px;
-    max-height: 252px;
-    background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
-    color: white;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    overflow: hidden;
-    flex-shrink: 0;
-    @include media(to-desktop) {
-        width: 281px !important;
-        max-height: 240px !important;
-        max-width: 281px;
-        max-height: 240px;
-
-
-}
-}
-.review-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-
-    overflow: visible;
-  }
-
-/* Фото - більше не круглі, а лише заокруглені */
-.review-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    object-fit: cover;
+.review-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
 }
 
-/* Корекція тексту */
-.review-text {
-
-    font-size: 20px;
-    line-height: 1.5; /* Оптимальна читабельність */
-    white-space: normal;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: clip;
-    flex-grow: 1; /* Розтягує текст до максимальної доступної висоти */
-    margin-bottom: 16px;
-    @include media(to-desktop) {
-        font-size: 16px;
-    line-height: 1.2;
-
-
-}
-
-}
-.review-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    position: absolute; /* Фіксуємо внизу */
-    bottom: 16px; /* Відступ від низу */
-    left: 24px;
-
+.review-role {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin: 0;
 }
 
 
 
-  /* Контейнер для імені та ролі */
-  .review-text-container {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-  }
-
-  /* Стилізація імені користувача */
-  .review-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  /* Стилізація ролі користувача */
-  .review-role {
-    font-size: 14px;
-    color: #cfcfcf;
-    margin: 0;
-  }
