@@ -43,14 +43,14 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  
-  
+
+
 }
 
 .swiper-wrapper-reviews {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  
+
   @include media(to-desktop) {
     width: 100%;
 
@@ -58,9 +58,9 @@
 }
 
 .review-item {
-  width: 510px !important;
+  width: 518px !important;
   height: 252px !important;
-  max-width: 510px;
+  max-width: 518px;
   max-height: 252px;
   background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
   color: white;
@@ -103,7 +103,7 @@
     font-size: 16px;
 line-height: 1.2;
 display: -webkit-box;
-  -webkit-line-clamp: 8; 
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
 
 
@@ -114,8 +114,8 @@ display: -webkit-box;
   display: flex;
   align-items: center;
   gap: 12px;
-  position: absolute; 
-  bottom: 16px; 
+  position: absolute;
+  bottom: 16px;
   left: 24px;
 }
 
