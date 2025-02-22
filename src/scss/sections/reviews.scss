@@ -103,6 +103,9 @@
   @include media(to-desktop) {
     font-size: 16px;
 line-height: 1.2;
+display: -webkit-box;
+  -webkit-line-clamp: 8; /* Обрізати після 9 рядків */
+  -webkit-box-orient: vertical;
 
 
 }
