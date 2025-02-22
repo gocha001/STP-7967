@@ -10,11 +10,13 @@
     justify-content: flex-start;
     width: 320px;
     max-width: 100%;
-    height: 641px;
-    min-height: 90vh !important;
+    // height: 641px;
+    min-height: 100vh !important;
     position: relative;
     overflow: hidden;
     background: url('/img/home/home-mob-1-min.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
