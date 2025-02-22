@@ -2,11 +2,12 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
-const swiperReviews = new Swiper('.review-carousel', {
+const swiper = new Swiper(".swiper-review-carousel", {
   modules: [Navigation, Keyboard],
-  slidesPerView: 1, // 1 картка за замовчуванням
+  slidesPerView: 1,
+  slidesPerGroup: 1, 
   spaceBetween: 20,
-  loop: false, // Вимикаємо безкінечний цикл, щоб уникнути багів
+  loop: false,
   navigation: {
     nextEl: '.review-next-btn-custom',
     prevEl: '.review-prev-btn-custom',
@@ -18,12 +19,8 @@ const swiperReviews = new Swiper('.review-carousel', {
   },
   breakpoints: {
     768: {
-      slidesPerView: 2, // 2 картки на планшеті та десктопі
+      slidesPerView: 2,
+      slidesPerGroup: 2, 
     }
-  },
-  on: {
-    reachEnd: function () {
-      console.log("Дійшли до останнього слайду");
-    },
   }
 });

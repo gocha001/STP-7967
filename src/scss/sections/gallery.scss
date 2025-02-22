@@ -4,6 +4,8 @@
     flex-direction: column;
     position: relative;
     align-items: center;
+    margin: 0;
+  padding: 0;
     @include media(to-desktop) {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -90,6 +92,8 @@
       height: 567px;
       border-radius: 10px;
       margin: 0 auto; 
+      display: block;
+     
       @include media(to-desktop) {
         width: 280px;
         height: 150px;
@@ -106,6 +110,8 @@
   .projects-item {
     flex-shrink: 0;
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
 /* Головний контейнер Swiper */
 .swiper-projects {
@@ -119,12 +125,12 @@
   }
 
 }
-  /* Кожен слайд */
-  .projects-item {
-    flex-shrink: 0;
-    width: 100%; 
-  }
   
+  .projects-list {
+
+    margin: 0;
+    padding: 0;
+  }
   
 
 
