@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (isOpen) {
                 accordion.classList.remove("open");
                 panel.style.maxHeight = null;
-                icon.src = "../img/icons/eye-close.png"; // Закрите око
+                icon.src = "/eye-close.png"; // Закрите око
             } else {
                 accordion.classList.add("open");
                 panel.style.maxHeight = panel.scrollHeight + "px"; // Встановлюємо висоту контенту
-                icon.src = "../img/icons/charm_eye.png"; // Відкрите око
+                icon.src = "/charm_eye.png"; // Відкрите око
             }
         });
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         panel.addEventListener("click", function () {
             accordion.classList.remove("open");
             panel.style.maxHeight = null;
-            icon.src = "../img/icons/eye-close.png"; // Закрите око
+            icon.src = "/eye-close.png"; // Закрите око
         });
     });
 });
