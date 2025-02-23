@@ -59,19 +59,23 @@
     font-size: 24px;
     color: #181a4d;
     line-height: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     text-align: justify; /* Вирівнює текст по ширині */
     letter-spacing: -0.5px; /* Відстань між абзацами */
     @include media(to-desktop) {
         font-size: 16px; /* Зменшений розмір шрифту */
         line-height: 18.75px; /* Як у макеті */
         letter-spacing: 0px;
+        margin-bottom: 0px;
 
       }
 }
 
-/* Блок з персонажами */
+
 .uniqueness-characters {
+    margin-top: 0;
+    padding-top: 0;
+    align-items: flex-start;
     max-width: 50%; /* Щоб персонажі не виходили за межі */
     max-height: 100%;
     object-fit: contain;
@@ -81,8 +85,8 @@
     align-items: center;
     @include media(to-desktop) {
         max-width: 100%;
-        // width: 280px !important; /* Ширина як у макеті */
-        // height: 272px !important; /* Висота як у макеті */
+        width: 280px !important; /* Ширина як у макеті */
+        height: 272px !important; /* Висота як у макеті */
         
      }
 
@@ -91,8 +95,6 @@
 
 /* Фон для персонажів */
 .characters-bg {
-    background: linear-gradient(180deg, #5D17EB 10%, #181A4D 100%);
-    border-radius: 20px;
     padding: 20px; 
     display: flex;
     justify-content: center;
@@ -104,25 +106,11 @@
         width: 280px !important; /* Ширина як у макеті */
         height: 272px !important; /* Висота як у макеті */
         border-radius: 12px; /* Закруглені кути */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       
         margin-bottom: 20px;
         gap: 0px;
 
       }
-}
-
-/* Персонажі */
-.uniqueness-character {
-    max-height: 320px;
-    object-fit: contain;
-    @include media(to-desktop) {
-        max-height: 100%;
-    width: auto;
-    margin: 0 -40px; /* Зменшуємо відстань між персонажами */
-    padding: 0; 
-    }
 }
 
 
@@ -142,12 +130,3 @@
     
 }}
 
-.uniqueness-demon {
-    left: -15px; /* Зміщуємо дівчину трохи вліво */
-    z-index: 2; /* Щоб була поверх лицаря */
-}
-
-.uniqueness-knight {
-    right: -15px; /* Зміщуємо лицаря трохи вправо */
-    z-index: 1; /* Лицар залишається під крилами */
-}
