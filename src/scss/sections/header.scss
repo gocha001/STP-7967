@@ -86,7 +86,8 @@
   border: none;
   background: none;
   margin: 0;
-  margin-top: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .mobile-menu {
@@ -115,10 +116,11 @@
 
 .close-button {
   width: 20px;
-  height: 0px2;
+  height: 20px;
   border: none;
   background: none;
   right: 20px;
+  padding: 0;
 }
 
 .mobile-menu ul {

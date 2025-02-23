@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 1200px;
   height: 628px;
-  background-image: url('/img/home/home-1-min.png');
+  background-image: url('/img/home/desctop-width=400-1-min.png');
   @include media(to-desktop) {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -14,7 +14,7 @@
     min-height: 100vh !important;
     position: relative;
     overflow: hidden;
-    background: url('/img/home/home-mob-1-min.png');
+    background: url('/img/home/home-width=400-1-min.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
