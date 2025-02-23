@@ -91,14 +91,18 @@
 }
 
 .review-text {
+  font-weight: 400;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.4;
   white-space: normal;
   word-wrap: break-word;
   overflow: hidden;
   text-overflow: clip;
   flex-grow: 1;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  padding-top: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
   @include media(to-desktop) {
     font-size: 16px;
 line-height: 1.2;
