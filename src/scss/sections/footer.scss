@@ -64,7 +64,7 @@
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: #EFEEEA;
     white-space: nowrap;
   }
   
@@ -125,7 +125,7 @@
   }
   
   .footer-links a {
-    color: white;
+    color: #EFEEEA;
     text-decoration: none;
     font-size: 14px;
   }
@@ -158,4 +158,24 @@
   }
     
   }
-  
+
+  .footer-links {
+    display: flex;
+    gap: 8px; /* Відступи між посиланнями */
+
+    li {
+        display: inline;
+        &:not(:last-child)::after {
+          content: " | ";
+          color: white; // або інший колір
+          margin: 0 8px;
+        }
+        @include media(to-desktop) {
+            &:not(:last-child)::after {
+                content: " ";
+                color: white; // або інший колір
+                margin: 0 8px;
+            }
+        }
+    }
+}
