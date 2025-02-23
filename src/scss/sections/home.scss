@@ -110,9 +110,22 @@
 
 .home-cta-link {
   width: 246px;
-  height: 73px;
+  height: 72px;
+  border-radius: 12px;
   @include media(to-desktop) {
     width: 132px;
     height: 40px;
   }
+}
+
+.home-cta-link:hover {
+  box-shadow: 0 2px 20px 0 #181a4d;
+  transform: scale(1.05);
+  border: none;
+  background: none;
+}
+
+.home-cta-link a {
+  border: none;
+  background: none;
 }

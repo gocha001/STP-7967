@@ -6,8 +6,8 @@
     margin: 0 auto;
     padding: 0 72px;
     height: 280px;
-   
-   
+
+
     @include media(to-desktop) {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -19,9 +19,9 @@
     padding-bottom: 40px;
     }
   }
-  
 
-  
+
+
   .footer-wrap {
     display: flex;
     flex-direction: column;
@@ -33,11 +33,11 @@
     @include media(to-desktop) {
         align-items: flex-start;
         max-width: 320px;
-       
+
       }
-    
+
   }
-  
+
   /* Перший ряд: Лого зліва, кнопка Google Play справа */
   .footer-logo-google {
     display: flex;
@@ -52,14 +52,14 @@
         margin-bottom: 15px;
         padding: 0 20px;
         gap: 20px;
-      
-       
+
+
       }
-    
+
   }
-  
-  
-  
+
+
+
   .footer-spark {
     font-size: 18px;
     font-weight: bold;
@@ -67,7 +67,7 @@
     color: #EFEEEA;
     white-space: nowrap;
   }
-  
+
   /* Вирівнювання кнопки Google Play */
   .footer-google {
     display: flex;
@@ -75,17 +75,18 @@
     justify-content: flex-end; /* Вирівнює кнопку по правому краю */
     flex-grow: 1; /* Змушує зайняти весь доступний простір */
   }
-  
+
   .footer-google img {
     width: 160px;
     height: auto;
     transition: transform 0.3s ease;
   }
-  
+
   .footer-google img:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 20px 0 #fff;
   }
-  
+
   /* Другий ряд: Посилання зліва, копірайт справа */
   .footer-links-div {
     display: flex;
@@ -97,14 +98,14 @@
     @include media(to-desktop) {
             flex-direction: column; /* В колонку */
             align-items: flex-start; /* Вирівнюємо вліво */
-             
+
       }
   }
- 
+
   .footer-links-right {
     display: flex;
   }
-  
+
   .footer-links {
     list-style: none;
     display: flex;
@@ -116,48 +117,51 @@
         gap: 10px;
         padding: 0;
         margin-bottom: 10px;
-       
+
     }
   }
-  
+
   .footer-links li {
     display: inline;
   }
-  
+
   .footer-links a {
     color: #EFEEEA;
     text-decoration: none;
     font-size: 14px;
   }
-  
+
   .footer-links a:hover {
     text-decoration: underline;
   }
-  
+
   .footer-right-div {
     text-align: right;
     @include media(to-desktop) {
-        
-        text-align: left; 
+
+        text-align: left;
         padding-bottom: 40px;
-       
+
     }
   }
-  
+
   .footer-right {
     font-size: 14px;
     color: white;
   }
-  
+
   .footer-logo{
     @include media(to-desktop) {
-        
+
       width: 40px;
       height: 40px;
-     
+
   }
-    
+
   }
+
+
+  
 
   .footer-links {
     display: flex;
