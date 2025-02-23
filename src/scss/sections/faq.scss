@@ -157,8 +157,8 @@
     padding: 0;
     font-size: 16px;
     width: 100%;
-    // color: #181a4d;
-    // background: #5D17EB;
+    color: #181a4d;
+    background: #5D17EB;
     opacity: 0;
     transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
 }
@@ -178,25 +178,25 @@
     color: #EFEEEA !important;
 }
 /* Ховер та фокус на акордеоні */
-.faq-list-item:hover,
-.faq-list-item:focus-within,
-.ac.open:hover,
-.ac.open:focus {
-    background-color: #5D17EB;
-    color: #EFEEEA !important;
-    transition: background-color 0.3s ease-in-out;
-}
+// .faq-list-item:hover,
+// .faq-list-item:focus-within,
+// .ac.open:hover,
+// .ac.open:focus {
+//     background-color: #5D17EB;
+//     color: #EFEEEA !important;
+//     transition: background-color 0.3s ease-in-out;
+// }
 
 /* Ховер і фокус на кнопці */
 
-.faq-btn:hover,
-.faq-btn:focus,
-// .ac.open .faq-btn:hover,
-.ac.open .faq-btn:focus {
-    background-color: #5D17EB;
-    color: #EFEEEA !important;
-    transition: background-color 0.3s ease-in-out;
-}
+// .faq-btn:hover,
+// .faq-btn:focus,
+// // .ac.open .faq-btn:hover,
+// .ac.open .faq-btn:focus {
+//     background-color: #5D17EB;
+//     color: #EFEEEA !important;
+//     transition: background-color 0.3s ease-in-out;
+// }
 
 /* Стилізуємо відкриту і закриту іконку */
 .ac-trigger .arrow-icon.eye-open {
