@@ -154,12 +154,12 @@
   padding-right: 16px;
   opacity: 1;
   color: #efeeea;
- 
+
 }
 .ac.open .faq-btn{
   background-color: #5D17EB;
   color: #efeeea;
-} 
+}
 
 
 // /* Стилізуємо відкриту і закриту іконку */
@@ -196,7 +196,17 @@
 
   .arrow-icon {
     content: url('/Group.png');
-  
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+    margin-right: 4px;
+     @include media(to-desktop) {
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
+      margin-right: 3px;
+     }
+
 }
 
 }
