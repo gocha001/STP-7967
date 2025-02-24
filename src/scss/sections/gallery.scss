@@ -24,9 +24,11 @@
     position: relative;
     margin-left: 72px;
     margin-right: 72px;
+    margin-bottom: 40px;
     @include media(to-desktop) {
       margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 28px;
     }
 
     }
@@ -35,6 +37,7 @@
       font-size: 44px;
       line-height: 1.2;
       color: #181a4d;
+      
       @include media(to-desktop) {
         font-weight: 500;
         font-size: 32px;

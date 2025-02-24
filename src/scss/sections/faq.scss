@@ -97,6 +97,7 @@
 
   @include media(to-desktop) {
     padding: 5px;
+    height: 72px;
   }
 }
 
@@ -195,7 +196,16 @@
 
   .arrow-icon {
     content: url('/Group.png');
-    
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+    margin-right: 4px;
+     @include media(to-desktop) {
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
+      margin-right: 3px;
+     }
 
 }
 
