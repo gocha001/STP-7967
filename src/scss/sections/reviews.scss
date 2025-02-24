@@ -18,6 +18,7 @@
   font-size: 44px;
   line-height: 1.2;
   color: #181a4d;
+  
   @include media(to-desktop) {
     font-weight: 500;
     font-size: 32px;
@@ -29,6 +30,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  margin-bottom: 40px;
+  @include media(to-desktop) {
+    margin-bottom: 28px;
+  }
 }
 
 .review-navigation {
