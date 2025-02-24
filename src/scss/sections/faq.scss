@@ -164,7 +164,7 @@
 // /* Стилізуємо відкриту і закриту іконку */
 .arrow-icon.eye-open {
   content: url('/charm_eye.png') !important;
-  width: 32px !important;
+  // width: 32px;
   top: 0 !important;
   right: 0 !important;
   @include media(to-desktop) {
@@ -195,25 +195,17 @@
 
   .arrow-icon {
     content: url('/Group.png');
-    width: 32px !important;
-    height: 32px !important; 
-    @include media(desktop) {
-      width: 20px !important;;
-      height: 20px !important;; 
-      }
-  }
-}
-.faq-btn:focus {
-  background-color: #5D17EB;
-  color: #efeeea;
-  .arrow-icon {
-    content: url('/Group.png');
-    width: 32px !important;
-    height: 32px !important; 
-    @include media(desktop) {
-      width: 20px !important;;
-      height: 20px !important;; 
-      }
-  }
+  
 }
 
+}
+
+.arrow-icon {
+  width: 32px;
+  height: 32px;
+
+  @include media(to-desktop) {
+    width: 20px;
+    height: 20px;
+  }
+}
