@@ -22,11 +22,13 @@
     color: #181a4d;
     margin-left: 72px;
     margin-right: 72px;
+    margin-bottom: 40px;
 
     @include media(to-desktop) {
         font-weight: 500;
         font-size: 32px;
         margin: 0;
+        margin-bottom: 28px;
     }
 }
 
@@ -66,7 +68,7 @@
 .faq-list-item {
     padding: 0 72px;
     position: relative;
-    
+
 
     @include media(to-desktop) {
         padding-left: 0;
@@ -120,7 +122,7 @@
 .faq-num {
     font-weight: 500;
     font-size: 24px;
-    
+
 
     @include media(to-desktop) {
         font-size: 16px;
@@ -215,4 +217,15 @@
         width: 20px;
         height: 20px;
     }
+}
+
+.ac-trigger:hover {
+  background: #5D17EB;
+  .arrow-icon {
+    content: url('/Group.png');
+    width: 24px;
+    position: relative;
+    right: 4px;
+    top: 4px;
+  }
 }

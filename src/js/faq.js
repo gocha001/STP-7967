@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     panel.addEventListener('mouseenter', () => {
       panel.parentElement.classList.add('hover-active');
     });
-  
+
     panel.addEventListener('mouseleave', () => {
       panel.parentElement.classList.remove('hover-active');
     });
@@ -55,3 +55,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
