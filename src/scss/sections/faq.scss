@@ -14,7 +14,7 @@
   }
 }
 
-/* Заголовок */
+// /* Заголовок */
 .faq-title {
   font-weight: 600;
   font-size: 44px;
@@ -32,7 +32,7 @@
   }
 }
 
-/* Текст у відповіді */
+// /* Текст у відповіді */
 .ac-text {
   font-weight: 400;
   font-size: 20px;
@@ -49,7 +49,7 @@
   }
 }
 
-/* Вирівнюємо текст питання */
+// /* Вирівнюємо текст питання */
 .button-text {
   font-size: 24px;
   font-weight: 500;
@@ -65,6 +65,7 @@
 
 /* Список питань FAQ */
 .faq-list-item {
+  cursor: pointer;
   padding: 0 72px;
   position: relative;
 
@@ -74,16 +75,7 @@
   }
 }
 
-/* Активний стан акордеону */
-.ac.open .faq-list-item,
-.ac.open .ac-header {
-  background: #5d17eb;
-  color: #efeeea;
-  font-weight: bold;
-  border-bottom: none;
-}
-
-/* Вирівнюємо кнопку акордеону */
+// /* Вирівнюємо кнопку акордеону */
 .faq-btn {
   color: #181a4d;
   display: flex;
@@ -138,26 +130,18 @@
 
 /* Фон і текст при відкритті */
 .ac.open .faq-btn {
-  // background: #5D17EB;
-  color: #efeeea;
   border-bottom: none;
-}
-
-/* Робимо текст білим при відкритті */
-.ac.open .faq-num,
-.ac.open .button-text {
-  color: #efeeea;
 }
 
 /* Виправляємо контент акордеону */
 .ac-panel {
+  cursor: pointer;
   max-height: 0;
   overflow: hidden;
   padding: 0;
   font-size: 16px;
+  background-color: #5D17EB;
   width: 100%;
-  color: #181a4d;
-  background: #5d17eb;
   opacity: 0;
   transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
 }
@@ -167,39 +151,20 @@
   max-height: none;
   padding-left: 16px;
   padding-right: 16px;
-  color: #efeeea !important;
   opacity: 1;
+  color: #efeeea;
+ 
 }
-.ac.open .faq-num,
-.ac.open .button-text,
-.ac.open .faq-text {
-  color: #efeeea !important;
-}
-/* Ховер та фокус на акордеоні */
-// .faq-list-item:hover,
-// .faq-list-item:focus-within,
-// .ac.open:hover,
-// .ac.open:focus {
-//     background-color: #5D17EB;
-//     color: #EFEEEA !important;
-//     transition: background-color 0.3s ease-in-out;
-// }
+.ac.open .faq-btn{
+  background-color: #5D17EB;
+  color: #efeeea;
+} 
 
-/* Ховер і фокус на кнопці */
 
-// .faq-btn:hover,
-// .faq-btn:focus,
-// // .ac.open .faq-btn:hover,
-// .ac.open .faq-btn:focus {
-//     background-color: #5D17EB;
-//     color: #EFEEEA !important;
-//     transition: background-color 0.3s ease-in-out;
-// }
-
-/* Стилізуємо відкриту і закриту іконку */
-.ac-trigger .arrow-icon.eye-open {
+// /* Стилізуємо відкриту і закриту іконку */
+.arrow-icon.eye-open {
   content: url('/charm_eye.png') !important;
-  width: 32px !important;
+  // width: 32px;
   top: 0 !important;
   right: 0 !important;
   @include media(to-desktop) {
@@ -207,33 +172,40 @@
     height: 20px;
   }
 }
+// } .arrow-icon.eye-closed {
+//   content: url('/eye-close.png');
 
-.ac-trigger .arrow-icon.eye-closed {
-  content: url('/eye-close.png');
+//   @include media(to-desktop) {
+//     width: 20px;
+//     height: 20px;
+//   }
+// }
+
+// .ac-trigger:active {
+//   @include media(desktop) {
+//     .arrow-icon {
+//       content: url('/charm_eye.png');
+//     }
+//   }
+// }
+
+.faq-btn:hover {
+  background-color: #5D17EB;
+  color: #efeeea;
+
+  .arrow-icon {
+    content: url('/Group.png');
+  
+}
+
+}
+
+.arrow-icon {
+  width: 32px;
+  height: 32px;
 
   @include media(to-desktop) {
     width: 20px;
     height: 20px;
-  }
-}
-
-.ac-trigger:hover {
-  @include media(desktop) {
-    background: #5d17eb;
-    .arrow-icon {
-      content: url('/Group.png');
-      width: 24px;
-      position: relative;
-      right: 4px;
-      top: 4px;
-    }
-  }
-}
-
-.ac-trigger:active {
-  @include media(desktop) {
-    .arrow-icon {
-      content: url('/charm_eye.png');
-    }
   }
 }
