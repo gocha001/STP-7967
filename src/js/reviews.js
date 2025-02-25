@@ -2,10 +2,10 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard } from 'swiper/modules';
 
-const swiper = new Swiper(".swiper-review-carousel", {
+const swiper = new Swiper('.swiper-review-carousel', {
   modules: [Navigation, Keyboard],
   slidesPerView: 1,
-  slidesPerGroup: 1, 
+  slidesPerGroup: 1,
   spaceBetween: 20,
   loop: false,
   navigation: {
@@ -20,7 +20,7 @@ const swiper = new Swiper(".swiper-review-carousel", {
   breakpoints: {
     768: {
       slidesPerView: 2,
-      slidesPerGroup: 2, 
-    }
-  }
+      slidesPerGroup: 2,
+    },
+  },
 });

@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('visited', 'true');
   }
 
-
   closeModalBtnOne.addEventListener('click', function () {
     modal.classList.remove('show');
     document.body.classList.remove('modal-open');

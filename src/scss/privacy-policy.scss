@@ -1,83 +1,84 @@
 .privacy {
-    width: 1200px;
-    padding: 40px 72px;
-    color: #181a4d;
-    @include media(to-desktop) {
-      width: 320px;
-      padding: 40px 20px;
-    }
+  width: 1200px;
+  padding: 40px 72px;
+  color: #181a4d;
+  @include media(to-desktop) {
+    width: 320px;
+    padding: 40px 20px;
   }
-  .privacy-policy {
-    padding-top: 60px;
-    @include media(to-desktop) {
-        padding-top: 20px;
-        
-      }
+}
+
+.privacy-policy {
+  padding-top: 60px;
+  @include media(to-desktop) {
+    padding-top: 20px;
   }
-  .title-policy-h1 {
-    font-size: 44px;
-    font-weight: 600px;
-    line-height: 1.17;
-    margin-bottom: 28px; 
-    @include media(to-desktop) {
-      font-size: 32px;
-      font-weight: 500px;
-      margin-bottom: 20px; 
-    
-       
-      }
-  }
-  .title-policy-p {
-    margin-bottom: 12px;
-    font-size: 20px;
-    font-weight: 400px;
-    line-height: 1.17;
-    @include media(to-desktop) {
-        font-size: 16px; 
-        }
-  }
-  .title-policy-h3 {
-    margin-bottom: 12px;
-    font-size: 24px;
+}
+.title-policy-h1 {
+  font-size: 44px;
+  font-weight: 600px;
+  line-height: 1.17;
+  margin-bottom: 28px;
+  @include media(to-desktop) {
+    font-size: 32px;
     font-weight: 500px;
-    @include media(to-desktop) {
-        font-size: 16px; 
-        }
+    margin-bottom: 20px;
   }
-  .title-policy-ul{
-    margin-bottom: 12px;
-    font-size: 20px;
-    font-weight: 400px;
-    line-height: 1.17;
-    list-style-type: disc; 
-    padding-left: 40px; 
-    @include media(to-desktop) {
-        font-size: 16px; 
-        padding-left: 20px; 
-        }
+}
 
+.title-policy-p {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 400px;
+  line-height: 1.17;
+  @include media(to-desktop) {
+    font-size: 16px;
   }
+}
 
-  .title-policy-li{
-    margin-bottom: 12px;
-    font-size: 20px;
-    font-weight: 400px;
-    line-height: 1.17;
-    @include media(to-desktop) {
-        font-size: 16px; 
-        }
+.title-policy-h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 500px;
+  @include media(to-desktop) {
+    font-size: 16px;
   }
-  .title-policy-link{
-    text-decoration: underline;
-    text-decoration-thickness: 1px; 
+}
+
+.title-policy-ul {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 400px;
+  line-height: 1.17;
+  list-style-type: disc;
+  padding-left: 40px;
+  @include media(to-desktop) {
+    font-size: 16px;
+    padding-left: 20px;
   }
+}
+
+.title-policy-li {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 400px;
+  line-height: 1.17;
+  @include media(to-desktop) {
+    font-size: 16px;
+  }
+}
+
+.title-policy-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
 
 .title-policy-a {
   text-decoration: underline;
-  text-decoration-thickness: 1px; 
-  
+  text-decoration-thickness: 1px;
 }
-.title-policy-type{
+
+.title-policy-type {
   margin-bottom: 12px;
 }
 
