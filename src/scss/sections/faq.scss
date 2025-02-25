@@ -1,9 +1,7 @@
-/* Вирівнюємо загальний контейнер FAQ */
 .faq {
   width: 100%;
   max-width: 1200px;
   margin: 0;
-
   @include media(to-desktop) {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -14,7 +12,6 @@
   }
 }
 
-// /* Заголовок */
 .faq-title {
   font-weight: 600;
   font-size: 44px;
@@ -23,7 +20,6 @@
   margin-left: 72px;
   margin-right: 72px;
   margin-bottom: 40px;
-
   @include media(to-desktop) {
     font-weight: 500;
     font-size: 32px;
@@ -32,7 +28,6 @@
   }
 }
 
-// /* Текст у відповіді */
 .ac-text {
   font-weight: 400;
   font-size: 20px;
@@ -40,7 +35,6 @@
   padding-right: 160px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-
   @include media(to-desktop) {
     padding-left: 12px;
     padding-right: 12px;
@@ -49,33 +43,28 @@
   }
 }
 
-// /* Вирівнюємо текст питання */
 .button-text {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.4;
-  flex-grow: 1; /* Займає весь доступний простір між цифрою та іконкою */
+  flex-grow: 1;
   margin-left: 120px;
-
   @include media(to-desktop) {
     font-size: 16px;
     margin-left: 0;
   }
 }
 
-/* Список питань FAQ */
 .faq-list-item {
   cursor: pointer;
   padding: 0 72px;
   position: relative;
-
   @include media(to-desktop) {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-// /* Вирівнюємо кнопку акордеону */
 .faq-btn {
   color: #181a4d;
   display: flex;
@@ -93,15 +82,13 @@
   padding: 20px;
   position: relative;
   z-index: 2;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
+  transition: color 0.3s ease-in-out;
   @include media(to-desktop) {
     padding: 5px;
     height: 72px;
   }
 }
 
-/* Вирівнюємо вміст: цифру, текст питання і іконку */
 .faq-content {
   display: flex;
   align-items: center;
@@ -109,17 +96,14 @@
   flex-grow: 1;
 }
 
-/* Вирівнюємо цифру */
 .faq-num {
   font-weight: 500;
   font-size: 24px;
-
   @include media(to-desktop) {
     font-size: 16px;
   }
 }
 
-/* Іконка ока вирівнюється праворуч */
 .arrow-container {
   display: flex;
   align-items: center;
@@ -129,40 +113,34 @@
   color: #181a4d;
 }
 
-/* Фон і текст при відкритті */
 .ac.open .faq-btn {
   border-bottom: none;
 }
 
-/* Виправляємо контент акордеону */
 .ac-panel {
   cursor: pointer;
   max-height: 0;
   overflow: hidden;
   padding: 0;
   font-size: 16px;
-  background-color: #5D17EB;
+  background-color: #5d17eb;
   width: 100%;
   opacity: 0;
   transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-/* Відображення контенту при відкритті */
 .ac.open .ac-panel {
   max-height: none;
   padding-left: 16px;
   padding-right: 16px;
   opacity: 1;
   color: #efeeea;
-
 }
-.ac.open .faq-btn{
-  background-color: #5D17EB;
+.ac.open .faq-btn {
+  background-color: #5d17eb;
   color: #efeeea;
 }
 
-
-// /* Стилізуємо відкриту і закриту іконку */
 .arrow-icon.eye-open {
   content: url('/charm_eye.png') !important;
   width: 32px !important;
@@ -173,52 +151,31 @@
     height: 20px !important;
   }
 }
-// } .arrow-icon.eye-closed {
-//   content: url('/eye-close.png');
-
-//   @include media(to-desktop) {
-//     width: 20px;
-//     height: 20px;
-//   }
-// }
-
-// .ac-trigger:active {
-//   @include media(desktop) {
-//     .arrow-icon {
-//       content: url('/charm_eye.png');
-//     }
-//   }
-// }
 
 .faq-btn:hover {
-  background-color: #5D17EB;
+  background-color: #5d17eb;
   color: #efeeea;
   border: none;
-
   .arrow-icon {
     content: url('/Group.png');
     width: 24px;
     height: 24px;
     margin-top: 4px;
     margin-right: 4px;
-     @include media(to-desktop) {
+    @include media(to-desktop) {
       width: 15px;
       height: 15px;
       margin-top: 3px;
       margin-right: 3px;
-     }
-
-}
-
+    }
+  }
 }
 
 .arrow-icon {
   width: 32px;
   height: 32px;
-
   @include media(to-desktop) {
     width: 20px;
     height: 20px;
   }
 }
-

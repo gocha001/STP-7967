@@ -21,6 +21,3 @@ const swiperProjects = new Swiper('.swiper-projects', {
     },
   },
 });
-
-
-

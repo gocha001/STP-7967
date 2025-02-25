@@ -1,134 +1,116 @@
 /* Основний стиль секції */
 .uniqueness-section {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 72px;
-       
-       
-        @include media(to-desktop) {
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          width: 280px;
-          max-width: 100%;
-          padding-left: 0;
-        padding-right: 0;
-        }
-    }
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 72px;
 
-  
-    .uniqueness-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center; /* Вирівнює текст і картинку по вертикалі */
-        justify-content: space-between;
-        gap: 50px;
-        @include media(to-desktop) {
-            flex-direction: column; /* Переміщення в колону */
-        text-align: justify; /* Вирівнювання тексту по ширині */
-        gap: 20px; 
-          }
-    }
+  @include media(to-desktop) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 280px;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
-/* Блок тексту */
+.uniqueness-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  @include media(to-desktop) {
+    flex-direction: column;
+    text-align: justify;
+    gap: 20px;
+  }
+}
+
 .uniqueness-content {
-    max-width: 600px;
-    flex: 1; /* Дозволяє текстовому блоку займати доступний простір */
-    @include media(to-desktop) {
-        max-width: 100%;
-        padding: 0;
-      }
+  max-width: 600px;
+  flex: 1;
+  @include media(to-desktop) {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
-/* Заголовок */
 .uniqueness-title {
-    font-weight: 600;
-    font-size: 44px;
-    line-height: 1.2;
-    color: #181a4d;
-    margin-bottom: 20px;
-    margin-bottom: 40px;
-    @include media(to-desktop) {
-      font-weight: 500;
-      font-size: 32px;
-      margin-bottom: 28px;
-    }
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.2;
+  color: #181a4d;
+  margin-bottom: 20px;
+  margin-bottom: 40px;
+  @include media(to-desktop) {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
 }
 
-/* Текст */
 .uniqueness-text {
-    font-size: 24px;
-    color: #181a4d;
-    line-height: 28px;
-    margin-bottom: 32px;
-    text-align: justify; /* Вирівнює текст по ширині */
-    letter-spacing: -0.5px; /* Відстань між абзацами */
-    @include media(to-desktop) {
-        font-size: 16px; /* Зменшений розмір шрифту */
-        line-height: 18.75px; /* Як у макеті */
-        letter-spacing: 0px;
-        margin-bottom: 0px;
-
-      }
+  font-size: 24px;
+  color: #181a4d;
+  line-height: 28px;
+  margin-bottom: 32px;
+  text-align: justify;
+  letter-spacing: -0.5px;
+  @include media(to-desktop) {
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0px;
+    margin-bottom: 0px;
+  }
 }
-
 
 .uniqueness-characters {
-    margin-top: 0;
-    padding-top: 0;
-    align-items: flex-start;
-    max-width: 50%; /* Щоб персонажі не виходили за межі */
-    max-height: 100%;
-    object-fit: contain;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include media(to-desktop) {
-        max-width: 100%;
-        width: 280px !important; /* Ширина як у макеті */
-        height: 272px !important; /* Висота як у макеті */
-        
-     }
-
-   
+  margin-top: 0;
+  padding-top: 0;
+  align-items: flex-start;
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media(to-desktop) {
+    max-width: 100%;
+    width: 280px !important;
+    height: 272px !important;
+  }
 }
 
-/* Фон для персонажів */
 .characters-bg {
-    padding: 20px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 516px; /* Фіксована ширина */
-    height: 438px; /* Фіксована висота */
-    @include media(to-desktop) {
-        max-width: 100%;
-        width: 280px !important; /* Ширина як у макеті */
-        height: 272px !important; /* Висота як у макеті */
-        border-radius: 12px; /* Закруглені кути */
-       
-        margin-bottom: 20px;
-        gap: 0px;
-
-      }
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 516px;
+  height: 438px;
+  @include media(to-desktop) {
+    max-width: 100%;
+    width: 280px !important;
+    height: 272px !important;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    gap: 0px;
+  }
 }
 
-
-/* Відображаємо картинку лише на мобільних між другим і третім абзацом */
 .mobile-only {
-    display: none;
-    @include media(to-desktop) {
-        display: flex;
-        
-    }
+  display: none;
+  @include media(to-desktop) {
+    display: flex;
+  }
 }
-.desktop-only{
-@include media(to-desktop) {
-    
-        display: none;
-    
-    
-}}
 
+.desktop-only {
+  @include media(to-desktop) {
+    display: none;
+  }
+}
