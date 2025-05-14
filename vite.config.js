@@ -5,11 +5,11 @@ import FullReload from 'vite-plugin-full-reload';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { globalStylesOptions } from './global.styles';
 
-// const isVercel = process.env.VERCEL;
-
 export default defineConfig(({ command }) => {
+  const isVercel = process.env.VERCEL;
+  const base = isVercel ? '/' : '/STP-7967/';
   return {
-    base: '/STP-7967/',
+    base,
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
