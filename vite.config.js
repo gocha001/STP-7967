@@ -5,7 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { globalStylesOptions } from './global.styles';
 
-const isVercel = process.env.VERCEL === '1';
+const isVercel = process.env.VERCEL;
 
 export default defineConfig(({ command }) => {
   return {
