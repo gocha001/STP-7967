@@ -4,10 +4,10 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { globalStylesOptions } from './global.styles';
-
+const isVercel = process.env.VERCEL === '1';
 export default defineConfig(({ command }) => {
   return {
-    base: '/',
+    base: isVercel ? '/' : '/STP-7967/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -27,6 +27,7 @@ export default defineConfig(({ command }) => {
         },
       },
       outDir: '../dist',
+      emptyOutDir: true,
     },
     plugins: [
       injectHTML(),
