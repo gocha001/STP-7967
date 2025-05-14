@@ -4,15 +4,17 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { globalStylesOptions } from './global.styles';
-// const isVercel = process.env.VERCEL === '1';
+
 export default defineConfig(({ command }) => {
   return {
-    base: process.env.VITE_BASE_URL || '/',
+    base: '/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
     build: {
+      outDir: '../dist',
+      emptyOutDir: true,
       sourcemap: true,
 
       rollupOptions: {
